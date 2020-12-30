@@ -1,0 +1,16 @@
+{
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+
+  "compilerOptions": {
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "lib": ["dom", "es2015", "es2016", "esnext"],
+    "jsx": "react-native"
+  },
+  "exclude": ["node_modules"]
+}

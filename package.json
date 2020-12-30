@@ -1,0 +1,49 @@
+{
+  "name": "react-native-user-interface-style",
+  "title": "React Native User Interface Style",
+  "version": "1.0.0",
+  "description": "React Native package to override userInterfaceStyle on iOS 13.0+",
+  "main": "dist/index.js",
+  "files": [
+    "/ios",
+    "/src",
+    "/dist",
+    "/*.podspec"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/signofactory/react-native-user-interface-style.git",
+    "baseUrl": "https://github.com/signofactory/react-native-user-interface-style"
+  },
+  "keywords": [
+    "react-native",
+    "react-native-ios",
+    "react native",
+    "react native ios",
+    "dark mode",
+    "ios dark mode",
+    "react native dark mode",
+    "user interface style",
+    "userInterfaceStyle"
+  ],
+  "author": {
+    "name": "signofactory",
+    "email": "signofactory@gmail.com"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "react": "^16.8.1",
+    "react-native": ">=0.60.0-rc.0 <1.0.x"
+  },
+  "devDependencies": {
+    "@types/react-native": "^0.63.43",
+    "react": "^16.9.0",
+    "react-native": "^0.61.5",
+    "typescript": "^4.1.3"
+  }
+}
