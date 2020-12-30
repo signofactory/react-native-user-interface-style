@@ -1,9 +1,10 @@
 {
   "name": "react-native-user-interface-style",
   "title": "React Native User Interface Style",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "React Native package to override userInterfaceStyle on iOS 13.0+",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "/ios",
     "/src",
@@ -11,6 +12,8 @@
     "/*.podspec"
   ],
   "scripts": {
+    "publish-package": "npm run build && yarn publish",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
