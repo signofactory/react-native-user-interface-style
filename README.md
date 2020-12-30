@@ -59,6 +59,11 @@ import { Text, SafeAreaView, Button, StyleSheet, PlatformColor } from 'react-nat
 import UserInterfaceStyle from "react-native-user-interface-style";
 
 function App() {
+  // Sets the User Interface Style
+  const setUserInferfaceStyle = (style) => {
+    UserInterfaceStyle.setStyle(style)
+  };
+  
   return (
     <SafeAreaView style={[styles.container, {backgroundColor: PlatformColor('systemBackground')}]}>
       <Text style={[styles.text, {color: PlatformColor('label')}]}>Color scheme: {scheme}</Text>
