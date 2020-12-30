@@ -1,7 +1,7 @@
 # React Native User Interface Style
 React Native User Interface Style ("RNUIS") is a React Native package to override userInterfaceStyle on iOS 13.0+. It extends react native’s built-in Appearance API by providing a way for users to override the app’s color scheme on **iOS only**.
 
-The package implements Apple's UIVIEW `overrideUserInterfaceStyle` property to override the app's color scheme (light / dark).
+The package implements Apple's UIView `overrideUserInterfaceStyle` property to override the app's color scheme (light / dark / unspecified).
 
 <a href="https://buymeacoffee.com/signofactory" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
