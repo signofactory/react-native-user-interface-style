@@ -15,4 +15,4 @@ import UserInterfaceStyle from 'react-native-user-interface-style';
 // TODO: What to do with the module?
 UserInterfaceStyle;
 ```
-<a href="buymeacoffee.com/signofactory" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+<a href="https://buymeacoffee.com/signofactory" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
