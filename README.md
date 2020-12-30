@@ -1,4 +1,4 @@
-# react-native-user-interface-style
+# React Native User Interface Style
 
 ## Getting started
 
