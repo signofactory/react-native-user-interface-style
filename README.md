@@ -51,41 +51,17 @@ const setUserInferfaceStyle = (style) => {
 };
 ```
 
-### Reading the current User Interface Style value
-Because we are changing the user’s preferred interface appearance direcly from the native code, you can retrieve the current User Interface Style using the [`Appearance`](https://reactnative.dev/docs/appearance) API or the [`useColorScheme`](https://reactnative.dev/docs/usecolorscheme) hook from React Native. See below an example that uses Functional Components from their documentation:
-```javascript
-import { Text, useColorScheme } from 'react-native';
-
-const MyComponent = () => {
-  const colorScheme = useColorScheme();
-  return <Text>useColorScheme(): {colorScheme}</Text>;
-};
-```
-
 ## Example
-Below you can find an example (adapted [from Expo](https://docs.expo.io/versions/latest/sdk/appearance/)) of a simple application using `setStyle` from RNUIS and `useColorScheme` from RN to change the and read the appearance of the system:
+Below you can find an example of a simple application using `setStyle` from RNUIS and `useColorScheme` from RN to change the and read the appearance of the system:
 ```javascript
 import React from 'react';
-import { Text, SafeAreaView, StatusBar, StyleSheet, getColorScheme } from 'react-native';
+import { Text, SafeAreaView, Button, StyleSheet, PlatformColor } from 'react-native';
 import UserInterfaceStyle from "react-native-user-interface-style";
 
 function App() {
-  const scheme = useColorScheme();
-
-  const themeStatusBarStyle = scheme === 'light' ? 'dark-content' : 'light-content';
-  const themeTextStyle = scheme === 'light' ? styles.lightThemeText : styles.darkThemeText;
-  const themeContainerStyle =
-    scheme === 'light' ? styles.lightContainer : styles.darkContainer;
-  
-  // Sets the User Interface Style
-  const setUserInferfaceStyle = (style) => {
-    UserInterfaceStyle.setStyle(style)
-  };
-
   return (
-    <SafeAreaView style={[styles.container, themeContainerStyle]}>
-      <StatusBar barStyle={themeStatusBarStyle} />
-      <Text style={[styles.text, themeTextStyle]}>Color scheme: {scheme}</Text>
+    <SafeAreaView style={[styles.container, {backgroundColor: PlatformColor('systemBackground')}]}>
+      <Text style={[styles.text, {color: PlatformColor('label')}]}>Color scheme: {scheme}</Text>
       <Button onPress={() => setUserInferfaceStyle('unspecified')}>System</Button>
       <Button onPress={() => setUserInferfaceStyle('light')}>Light</Button>
       <Button onPress={() => setUserInferfaceStyle('dark')}>Dark</Button>
@@ -98,18 +74,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  lightContainer: {
-    backgroundColor: '#D0D0C0',
-  },
-  darkContainer: {
-    backgroundColor: '#242C40',
-  },
-  lightThemeText: {
-    color: '#242C40',
-  },
-  darkThemeText: {
-    color: '#D0D0C0',
   },
 });
 ```
