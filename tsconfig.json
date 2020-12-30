@@ -4,6 +4,7 @@
   "compilerOptions": {
     "outDir": "dist",
     "esModuleInterop": true,
+    "declaration": true,
     "target": "es5",
     "module": "commonjs",
     "strict": true,
