@@ -47,7 +47,7 @@ You can use the `setStyle` method from UserInterfaceStyle to override the curren
 import UserInterfaceStyle from 'react-native';
 
 const setUserInferfaceStyle = (style) => {
-  UserInterfaceStyle.setStyle(style
+  UserInterfaceStyle.setStyle(style)
 };
 ```
 
@@ -76,14 +76,19 @@ function App() {
   const themeTextStyle = scheme === 'light' ? styles.lightThemeText : styles.darkThemeText;
   const themeContainerStyle =
     scheme === 'light' ? styles.lightContainer : styles.darkContainer;
+  
+  // Sets the User Interface Style
+  const setUserInferfaceStyle = (style) => {
+    UserInterfaceStyle.setStyle(style)
+  };
 
   return (
     <SafeAreaView style={[styles.container, themeContainerStyle]}>
       <StatusBar barStyle={themeStatusBarStyle} />
       <Text style={[styles.text, themeTextStyle]}>Color scheme: {scheme}</Text>
-      <Button onPress={() => {UserInterfaceStyle.setStyle('unspecified')}}>System</Button>
-      <Button onPress={() => {UserInterfaceStyle.setStyle('light')}>Light</Button>
-      <Button onPress={() => {UserInterfaceStyle.setStyle('dark')}>Dark</Button>
+      <Button onPress={() => setUserInferfaceStyle('unspecified')}>System</Button>
+      <Button onPress={() => setUserInferfaceStyle('light')}>Light</Button>
+      <Button onPress={() => setUserInferfaceStyle('dark')}>Dark</Button>
     </SafeAreaView>
   );
 }
