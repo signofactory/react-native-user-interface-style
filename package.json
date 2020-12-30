@@ -1,7 +1,7 @@
 {
   "name": "react-native-user-interface-style",
   "title": "React Native User Interface Style",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "React Native package to override userInterfaceStyle on iOS 13.0+",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
